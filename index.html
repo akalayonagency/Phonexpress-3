@@ -377,8 +377,10 @@ function sendHeight() {
     document.documentElement.offsetHeight
   );
 
-  window.parent.postMessage({ iframeHeight: h + 80 }, '*');
-}
+ window.parent.postMessage({
+  frameId: 'px-frame-2',
+  iframeHeight: h
+}, '*');
   </script>
 </body>
 </html>
