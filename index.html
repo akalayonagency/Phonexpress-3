@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pourquoi nous choisir - Phone Xpress</title>
+
+  <style>
+    :root {
+      --px-blue: #0b8fd8;
+      --px-blue-light: #38c7ff;
+      --px-blue-dark: #033f68;
+      --px-night: #06111c;
+      --px-white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: transparent;
+      color: var(--px-white);
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── WRAPPER ── */
+    .px-why {
+      width: min(1200px, 100%);
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    /* ── HEADER ── */
+    .px-why-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .px-why-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(6,17,28,0.52);
+      border: 1px solid rgba(56,199,255,0.45);
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--px-blue-light);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .px-why-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--px-blue-light);
+      box-shadow: 0 0 6px var(--px-blue-light);
+      animation: pxDotPulse 2s infinite;
+    }
+
+    @keyframes pxDotPulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.25; }
+    }
+
+    .px-why-title {
+      font-size: clamp(26px, 3vw, 42px);
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 1.05;
+      color: var(--px-white);
+      text-shadow:
+        0 0 18px rgba(56,199,255,0.4),
+        0 0 50px rgba(11,143,216,0.2);
+    }
+
+    .px-why-title span {
+      color: var(--px-blue-light);
+    }
+
+    /* ── GRILLE ── */
+    .px-why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .px-why-grid-bottom {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 66%;
+      margin: 0 auto;
+    }
+
+    /* ── CARD ── */
+    .px-why-card {
+      position: relative;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(56,199,255,0.18);
+      border-radius: 18px;
+      padding: 24px 20px;
+      overflow: hidden;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .px-why-card:hover {
+      border-color: rgba(56,199,255,0.5);
+      transform: translateY(-3px);
+    }
+
+    .px-why-card canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .px-why-card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .px-why-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .px-why-card-title {
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--px-white);
+      margin: 0 0 8px;
+      letter-spacing: 0.04em;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    }
+
+    .px-why-card-text {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      margin: 0;
+      line-height: 1.55;
+      font-weight: 400;
+    }
+
+    .px-why-badge {
+      display: inline-block;
+      font-size: 11px;
+      background: rgba(56,199,255,0.1);
+      border: 1px solid rgba(56,199,255,0.3);
+      color: var(--px-blue-light);
+      border-radius: 6px;
+      padding: 2px 9px;
+      margin-top: 10px;
+      font-weight: 700;
+    }
+
+    /* ── RESPONSIVE TABLETTE ── */
+    @media (max-width: 768px) {
+      .px-why {
+        padding: 40px 16px;
+      }
+
+      .px-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .px-why-grid-bottom {
+        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ── RESPONSIVE MOBILE ── */
+    @media (max-width: 480px) {
+      .px-why {
+        padding: 32px 12px;
+      }
+
+      .px-why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .px-why-grid-bottom {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+      }
+
+      .px-why-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="px-why">
+
+    <div class="px-why-header">
+      <div class="px-why-pill">
+        <div class="px-why-pill-dot"></div>
+        Nos engagements
+      </div>
+      <h2 class="px-why-title">Pourquoi choisir <span>Phone Xpress</span> ?</h2>
+    </div>
+
+    <div class="px-why-grid">
+
+      <div class="px-why-card">
+        <canvas></canvas>
+        <div class="px-why-card-content">
+          <span class="px-why-icon">🔧</span>
+          <div class="px-why-card-title">Pièces premium</div>
+          <p class="px-why-card-text">Uniquement des pièces d'origine ou équivalent OEM — aucun compromis sur la qualité.</p>
+        </div>
+      </div>
+
+      <div class="px-why-card">
+        <canvas></canvas>
+        <div class="px-why-card-content">
+          <span class="px-why-icon">🛡️</span>
+          <div class="px-why-card-title">Garantie incluse</div>
+          <p class="px-why-card-text">Chaque réparation est couverte par une garantie. Si ça lâche, on s'en occupe.</p>
+        </div>
+      </div>
+
+      <div class="px-why-card">
+        <canvas></canvas>
+        <div class="px-why-card-content">
+          <span class="px-why-icon">🚀</span>
+          <div class="px-why-card-title">Sans rendez-vous</div>
+          <p class="px-why-card-text">Passez directement — pas besoin de planifier. On vous prend en charge sur place.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="px-why-grid-bottom">
+
+      <div class="px-why-card">
+        <canvas></canvas>
+        <div class="px-why-card-content">
+          <span class="px-why-icon">🔒</span>
+          <div class="px-why-card-title">Données protégées</div>
+          <p class="px-why-card-text">Votre téléphone reste entre les mains de Thomas. Vos données ne sont jamais exposées.</p>
+        </div>
+      </div>
+
+      <div class="px-why-card">
+        <canvas></canvas>
+        <div class="px-why-card-content">
+          <span class="px-why-icon">🇫🇷</span>
+          <div class="px-why-card-title">Accessoires 100% français</div>
+          <p class="px-why-card-text">Nos accessoires viennent d'un fournisseur français — qualité et circuit court garantis.</p>
+          <span class="px-why-badge">Fournisseur 🇫🇷</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+    const cards = document.querySelectorAll('.px-why-card');
+
+    cards.forEach(function(card) {
+      var canvas = card.querySelector('canvas');
+      var ctx = canvas.getContext('2d');
+      var w = 0, h = 0, particles = [];
+
+      function rand(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      function init() {
+        var rect = card.getBoundingClientRect();
+        w = canvas.width = rect.width * window.devicePixelRatio;
+        h = canvas.height = rect.height * window.devicePixelRatio;
+        ctx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+        w = rect.width;
+        h = rect.height;
+
+        particles = [];
+        var count = Math.max(8, Math.floor((w * h) / 2800));
+
+        for (var i = 0; i < count; i++) {
+          particles.push({
+            x: rand(0, w),
+            y: rand(0, h),
+            r: rand(0.6, 2.2),
+            sx: (Math.random() - 0.5) * 0.45,
+            sy: (Math.random() - 0.5) * 0.45,
+            a: rand(0.2, 0.75),
+            blue: Math.random() > 0.45,
+            rot: rand(0, Math.PI * 2),
+            rotSpeed: (Math.random() - 0.5) * 0.03,
+            type: Math.random() > 0.6 ? 'shard' : 'circle'
+          });
+        }
+      }
+
+      function drawParticle(p) {
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot);
+        ctx.globalAlpha = p.a;
+
+        var color = p.blue
+          ? 'rgba(56,199,255,' + p.a + ')'
+          : 'rgba(255,255,255,' + (p.a * 0.4) + ')';
+
+        ctx.fillStyle = color;
+        ctx.shadowColor = p.blue ? 'rgba(56,199,255,0.8)' : 'transparent';
+        ctx.shadowBlur = p.blue ? 6 : 0;
+
+        if (p.type === 'shard') {
+          ctx.beginPath();
+          ctx.moveTo(-p.r, -p.r * 0.4);
+          ctx.lineTo(p.r * 1.5, -p.r * 0.2);
+          ctx.lineTo(p.r * 0.5, p.r);
+          ctx.lineTo(-p.r * 0.7, p.r * 0.5);
+          ctx.closePath();
+          ctx.fill();
+        } else {
+          ctx.beginPath();
+          ctx.arc(0, 0, p.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        ctx.restore();
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, w, h);
+
+        particles.forEach(function(p) {
+          p.x += p.sx;
+          p.y += p.sy;
+          p.rot += p.rotSpeed;
+
+          if (p.x < -10) p.x = w + 10;
+          if (p.x > w + 10) p.x = -10;
+          if (p.y < -10) p.y = h + 10;
+          if (p.y > h + 10) p.y = -10;
+
+          drawParticle(p);
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      init();
+      animate();
+
+      window.addEventListener('resize', init);
+    });
+
+    /* ── postMessage pour Odoo iframe auto-height ── */
+    function sendHeight() {
+      var h = document.body.scrollHeight;
+      window.parent.postMessage({ iframeHeight: h }, '*');
+    }
+    window.addEventListener('load', function() {
+      sendHeight();
+      setTimeout(sendHeight, 500);
+      setTimeout(sendHeight, 1500);
+    });
+    window.addEventListener('resize', sendHeight);
+  </script>
+</body>
+</html>
